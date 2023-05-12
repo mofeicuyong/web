@@ -63,7 +63,7 @@ def findflight(request, format=None):
         if all_entries:
             return HttpResponse(json.dumps(findflight), content_type="application/json")
         else:
-            return HttpResponse("Service Unavailable", content_type="text/plain", status=503)
+            return HttpResponse("no flights", content_type="text/plain", status=503)
 
 
 @csrf_exempt
